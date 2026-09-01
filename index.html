@@ -2,11 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <title>RONIT VISUALS — Creative Video Editing & Motion</title>
   <meta name="description" content="At RONIT VISUALS, we turn footage into stories that connect, engage, and leave a lasting impression.">
   <meta property="og:title" content="RONIT VISUALS — Creative Video Editing & Motion">
   <meta property="og:description" content="At RONIT VISUALS, we turn footage into stories that connect, engage, and leave a lasting impression.">
+  <link rel="icon" type="image/png" href="https://i.ibb.co/8nn9dmFR/Artboard-4.png">
+  <link rel="shortcut icon" type="image/png" href="https://i.ibb.co/8nn9dmFR/Artboard-4.png">
+  <link rel="apple-touch-icon" href="https://i.ibb.co/8nn9dmFR/Artboard-4.png">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,6 +24,7 @@
         <img src="https://i.ibb.co/8nn9dmFR/Artboard-4.png" alt="RONIT VISUALS Logo" class="brand-logo" />
       </a>
 
+      <!-- Desktop Navigation Menu -->
       <nav class="nav-menu">
         <a href="#work" class="nav-item active">Work</a>
         <a href="#reviews" class="nav-item">Reviews</a>
@@ -29,6 +33,30 @@
         <a href="#services" class="nav-item">Services</a>
         <a href="#contact" class="nav-item">Contact</a>
       </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobileMenuToggle" class="mobile-menu-btn" aria-label="Toggle navigation menu">
+        <svg id="menuIconBars" class="menu-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <svg id="menuIconClose" class="menu-icon" style="display:none;" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileDrawer" class="mobile-drawer">
+      <div class="mobile-drawer-inner">
+        <a href="#work" class="mobile-drawer-link">Work</a>
+        <a href="#reviews" class="mobile-drawer-link">Reviews</a>
+        <a href="#showreel" class="mobile-drawer-link">Showreel</a>
+        <a href="#about" class="mobile-drawer-link">About & Services</a>
+        <a href="#contact" class="mobile-drawer-link mobile-drawer-cta">Contact Now →</a>
+      </div>
     </div>
   </header>
 
@@ -46,8 +74,13 @@
           <div class="hero-actions-block">
             <p class="hero-subtitle">We engineer high-fidelity moving images, brand films, and culture-defining commercial narratives for world-class creators and forward-thinking brands.</p>
             <div class="hero-btn-group">
-              <a href="#work" class="hero-btn-primary">Explore Work ↓</a>
-              <a href="#contact" class="hero-btn-secondary">Contact Now</a>
+              <a href="#work" class="hero-btn-primary">
+                <span>Explore Work</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00e5ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="hero-arrow-icon"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+              </a>
+              <a href="#contact" class="hero-btn-secondary">
+                <span>Contact Now</span>
+              </a>
             </div>
           </div>
         </div>
@@ -125,6 +158,22 @@
               <span class="badge-text">Endorsements & Trust</span>
             </div>
             <h2 class="section-title">Client <span class="text-stroke">Reviews</span></h2>
+
+            <!-- 50+ Happy Clients Animated Counter Pill -->
+            <div class="happy-clients-badge" id="happyClientsBadge">
+              <div class="happy-clients-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <div class="happy-clients-text">
+                <span class="happy-clients-num" id="happyClientsCount">0+</span>
+                <span class="happy-clients-label">Happy Clients</span>
+              </div>
+            </div>
           </div>
 
           <!-- Arrow navigation -->
@@ -161,11 +210,11 @@
       <div class="video-grid">
         
       <!-- Video 1 -->
-      <article class="project-card" data-video-id="1ZU1RDzKUJQNlg-aZySBcrZG76QZUP0b3">
+      <article class="project-card" data-video-id="1Pdt0wbaYS8QzLhkzXnUHe700SiFMi_pM">
         <div class="video-container">
           <div class="video-frame aspect-vertical" id="card-media-0">
-            <div class="thumbnail-wrapper" onclick="playCardVideo(0, 'https://drive.google.com/file/d/1ZU1RDzKUJQNlg-aZySBcrZG76QZUP0b3/preview')">
-              <img src="https://drive.google.com/thumbnail?id=1ZU1RDzKUJQNlg-aZySBcrZG76QZUP0b3&sz=s1920" alt="Video 1" class="card-thumb" loading="lazy" />
+            <div class="thumbnail-wrapper" onclick="playCardVideo(0, 'https://drive.google.com/file/d/1Pdt0wbaYS8QzLhkzXnUHe700SiFMi_pM/preview')">
+              <img src="https://drive.google.com/thumbnail?id=1Pdt0wbaYS8QzLhkzXnUHe700SiFMi_pM&sz=s1920" alt="Video 1" class="card-thumb" loading="lazy" />
               <div class="play-overlay">
                 <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1">
                   <circle cx="12" cy="12" r="10" class="play-circle" />
@@ -292,6 +341,78 @@
           <div class="video-frame aspect-vertical" id="card-media-7">
             <div class="thumbnail-wrapper" onclick="playCardVideo(7, 'https://drive.google.com/file/d/15VIwPs5ZDLOatMQ4bGCI8lE1hdmbgzjV/preview')">
               <img src="https://drive.google.com/thumbnail?id=15VIwPs5ZDLOatMQ4bGCI8lE1hdmbgzjV&sz=s1920" alt="Video 8" class="card-thumb" loading="lazy" />
+              <div class="play-overlay">
+                <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1">
+                  <circle cx="12" cy="12" r="10" class="play-circle" />
+                  <path d="M10 8l6 4-6 4V8z" fill="white" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    
+
+      <!-- Video 9 -->
+      <article class="project-card" data-video-id="1w7bYLI1qi8B2QfGpfDeBiFReNbnSC-l6">
+        <div class="video-container">
+          <div class="video-frame aspect-vertical" id="card-media-8">
+            <div class="thumbnail-wrapper" onclick="playCardVideo(8, 'https://drive.google.com/file/d/1w7bYLI1qi8B2QfGpfDeBiFReNbnSC-l6/preview')">
+              <img src="https://drive.google.com/thumbnail?id=1w7bYLI1qi8B2QfGpfDeBiFReNbnSC-l6&sz=s1920" alt="Video 9" class="card-thumb" loading="lazy" />
+              <div class="play-overlay">
+                <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1">
+                  <circle cx="12" cy="12" r="10" class="play-circle" />
+                  <path d="M10 8l6 4-6 4V8z" fill="white" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    
+
+      <!-- Video 10 -->
+      <article class="project-card" data-video-id="1ZU1RDzKUJQNlg-aZySBcrZG76QZUP0b3">
+        <div class="video-container">
+          <div class="video-frame aspect-vertical" id="card-media-9">
+            <div class="thumbnail-wrapper" onclick="playCardVideo(9, 'https://drive.google.com/file/d/1ZU1RDzKUJQNlg-aZySBcrZG76QZUP0b3/preview')">
+              <img src="https://drive.google.com/thumbnail?id=1ZU1RDzKUJQNlg-aZySBcrZG76QZUP0b3&sz=s1920" alt="Video 10" class="card-thumb" loading="lazy" />
+              <div class="play-overlay">
+                <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1">
+                  <circle cx="12" cy="12" r="10" class="play-circle" />
+                  <path d="M10 8l6 4-6 4V8z" fill="white" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    
+
+      <!-- Video 11 -->
+      <article class="project-card" data-video-id="1X9_LfLc_-3lnSjpoUhZPD9vEmkl92RRQ">
+        <div class="video-container">
+          <div class="video-frame aspect-vertical" id="card-media-10">
+            <div class="thumbnail-wrapper" onclick="playCardVideo(10, 'https://drive.google.com/file/d/1X9_LfLc_-3lnSjpoUhZPD9vEmkl92RRQ/preview')">
+              <img src="https://drive.google.com/thumbnail?id=1X9_LfLc_-3lnSjpoUhZPD9vEmkl92RRQ&sz=s1920" alt="Video 11" class="card-thumb" loading="lazy" />
+              <div class="play-overlay">
+                <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1">
+                  <circle cx="12" cy="12" r="10" class="play-circle" />
+                  <path d="M10 8l6 4-6 4V8z" fill="white" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    
+
+      <!-- Video 12 -->
+      <article class="project-card" data-video-id="1hBZImK4Q5L2CsFqoxkv71Tb3YxS7JJbj">
+        <div class="video-container">
+          <div class="video-frame aspect-vertical" id="card-media-11">
+            <div class="thumbnail-wrapper" onclick="playCardVideo(11, 'https://drive.google.com/file/d/1hBZImK4Q5L2CsFqoxkv71Tb3YxS7JJbj/preview')">
+              <img src="https://drive.google.com/thumbnail?id=1hBZImK4Q5L2CsFqoxkv71Tb3YxS7JJbj&sz=s1920" alt="Video 12" class="card-thumb" loading="lazy" />
               <div class="play-overlay">
                 <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1">
                   <circle cx="12" cy="12" r="10" class="play-circle" />
@@ -597,7 +718,7 @@
 
   <script>
     // Projects and Showreel Metadata for Video Manager
-    const projectsData = [{"index":0,"embedUrl":"https://drive.google.com/file/d/1ZU1RDzKUJQNlg-aZySBcrZG76QZUP0b3/preview","thumbUrl":"https://drive.google.com/thumbnail?id=1ZU1RDzKUJQNlg-aZySBcrZG76QZUP0b3&sz=s1920","title":"Project 1"},{"index":1,"embedUrl":"https://drive.google.com/file/d/1FKRDcfaitfp2oblNP7mxYGizqJ5lTN9g/preview","thumbUrl":"https://drive.google.com/thumbnail?id=1FKRDcfaitfp2oblNP7mxYGizqJ5lTN9g&sz=s1920","title":"Project 2"},{"index":2,"embedUrl":"https://drive.google.com/file/d/16C-eG8Drp5OTWNNfe5MLx7KTCtt2yqZl/preview","thumbUrl":"https://drive.google.com/thumbnail?id=16C-eG8Drp5OTWNNfe5MLx7KTCtt2yqZl&sz=s1920","title":"Project 3"},{"index":3,"embedUrl":"https://drive.google.com/file/d/11LQtyhrfBPqwzokDYQwJMCbK6AlJijSL/preview","thumbUrl":"https://drive.google.com/thumbnail?id=11LQtyhrfBPqwzokDYQwJMCbK6AlJijSL&sz=s1920","title":"Project 4"},{"index":4,"embedUrl":"https://drive.google.com/file/d/1qj9gD5fPydWiVnNEwTOKB2QH4YNLM8G-/preview","thumbUrl":"https://drive.google.com/thumbnail?id=1qj9gD5fPydWiVnNEwTOKB2QH4YNLM8G-&sz=s1920","title":"Project 5"},{"index":5,"embedUrl":"https://drive.google.com/file/d/1oA-Dm7w847XZ47v6b6_uC2PTylNbRvQu/preview","thumbUrl":"https://drive.google.com/thumbnail?id=1oA-Dm7w847XZ47v6b6_uC2PTylNbRvQu&sz=s1920","title":"Project 6"},{"index":6,"embedUrl":"https://drive.google.com/file/d/1yb7WExKEb4x2PgqlqwdPSOgL6O-kWMFW/preview","thumbUrl":"https://drive.google.com/thumbnail?id=1yb7WExKEb4x2PgqlqwdPSOgL6O-kWMFW&sz=s1920","title":"Project 7"},{"index":7,"embedUrl":"https://drive.google.com/file/d/15VIwPs5ZDLOatMQ4bGCI8lE1hdmbgzjV/preview","thumbUrl":"https://drive.google.com/thumbnail?id=15VIwPs5ZDLOatMQ4bGCI8lE1hdmbgzjV&sz=s1920","title":"Project 8"}];
+    const projectsData = [{"index":0,"embedUrl":"https://drive.google.com/file/d/1Pdt0wbaYS8QzLhkzXnUHe700SiFMi_pM/preview","thumbUrl":"https://drive.google.com/thumbnail?id=1Pdt0wbaYS8QzLhkzXnUHe700SiFMi_pM&sz=s1920","title":"Project 1"},{"index":1,"embedUrl":"https://drive.google.com/file/d/1FKRDcfaitfp2oblNP7mxYGizqJ5lTN9g/preview","thumbUrl":"https://drive.google.com/thumbnail?id=1FKRDcfaitfp2oblNP7mxYGizqJ5lTN9g&sz=s1920","title":"Project 2"},{"index":2,"embedUrl":"https://drive.google.com/file/d/16C-eG8Drp5OTWNNfe5MLx7KTCtt2yqZl/preview","thumbUrl":"https://drive.google.com/thumbnail?id=16C-eG8Drp5OTWNNfe5MLx7KTCtt2yqZl&sz=s1920","title":"Project 3"},{"index":3,"embedUrl":"https://drive.google.com/file/d/11LQtyhrfBPqwzokDYQwJMCbK6AlJijSL/preview","thumbUrl":"https://drive.google.com/thumbnail?id=11LQtyhrfBPqwzokDYQwJMCbK6AlJijSL&sz=s1920","title":"Project 4"},{"index":4,"embedUrl":"https://drive.google.com/file/d/1qj9gD5fPydWiVnNEwTOKB2QH4YNLM8G-/preview","thumbUrl":"https://drive.google.com/thumbnail?id=1qj9gD5fPydWiVnNEwTOKB2QH4YNLM8G-&sz=s1920","title":"Project 5"},{"index":5,"embedUrl":"https://drive.google.com/file/d/1oA-Dm7w847XZ47v6b6_uC2PTylNbRvQu/preview","thumbUrl":"https://drive.google.com/thumbnail?id=1oA-Dm7w847XZ47v6b6_uC2PTylNbRvQu&sz=s1920","title":"Project 6"},{"index":6,"embedUrl":"https://drive.google.com/file/d/1yb7WExKEb4x2PgqlqwdPSOgL6O-kWMFW/preview","thumbUrl":"https://drive.google.com/thumbnail?id=1yb7WExKEb4x2PgqlqwdPSOgL6O-kWMFW&sz=s1920","title":"Project 7"},{"index":7,"embedUrl":"https://drive.google.com/file/d/15VIwPs5ZDLOatMQ4bGCI8lE1hdmbgzjV/preview","thumbUrl":"https://drive.google.com/thumbnail?id=15VIwPs5ZDLOatMQ4bGCI8lE1hdmbgzjV&sz=s1920","title":"Project 8"},{"index":8,"embedUrl":"https://drive.google.com/file/d/1w7bYLI1qi8B2QfGpfDeBiFReNbnSC-l6/preview","thumbUrl":"https://drive.google.com/thumbnail?id=1w7bYLI1qi8B2QfGpfDeBiFReNbnSC-l6&sz=s1920","title":"Project 9"},{"index":9,"embedUrl":"https://drive.google.com/file/d/1ZU1RDzKUJQNlg-aZySBcrZG76QZUP0b3/preview","thumbUrl":"https://drive.google.com/thumbnail?id=1ZU1RDzKUJQNlg-aZySBcrZG76QZUP0b3&sz=s1920","title":"Project 10"},{"index":10,"embedUrl":"https://drive.google.com/file/d/1X9_LfLc_-3lnSjpoUhZPD9vEmkl92RRQ/preview","thumbUrl":"https://drive.google.com/thumbnail?id=1X9_LfLc_-3lnSjpoUhZPD9vEmkl92RRQ&sz=s1920","title":"Project 11"},{"index":11,"embedUrl":"https://drive.google.com/file/d/1hBZImK4Q5L2CsFqoxkv71Tb3YxS7JJbj/preview","thumbUrl":"https://drive.google.com/thumbnail?id=1hBZImK4Q5L2CsFqoxkv71Tb3YxS7JJbj&sz=s1920","title":"Project 12"}];
 
     const showreelMeta = {
       embedUrl: "https://drive.google.com/file/d/1D0BwnZX37K7L26JL2uB2XR4ma8ZoYYDr/preview",
@@ -758,6 +879,78 @@
     }
 
     renderReviews();
+
+    // 50+ Happy Clients Animated Counter on View
+    const happyClientsCountEl = document.getElementById('happyClientsCount');
+    const happyClientsBadgeEl = document.getElementById('happyClientsBadge');
+    if (happyClientsCountEl && happyClientsBadgeEl) {
+      let animated = false;
+      const animateCount = function() {
+        if (animated) return;
+        animated = true;
+        const end = 50;
+        const duration = 2200;
+        const frameRate = 1000 / 60;
+        const totalFrames = Math.round(duration / frameRate);
+        let frame = 0;
+
+        const countTimer = setInterval(function() {
+          frame++;
+          const progress = frame / totalFrames;
+          const easeOutProgress = 1 - Math.pow(1 - progress, 3);
+          const currentVal = Math.min(Math.round(easeOutProgress * end), end);
+          happyClientsCountEl.textContent = currentVal + '+';
+
+          if (frame >= totalFrames) {
+            clearInterval(countTimer);
+            happyClientsCountEl.textContent = end + '+';
+          }
+        }, frameRate);
+      };
+
+      if ('IntersectionObserver' in window) {
+        const countObserver = new IntersectionObserver(function(entries) {
+          if (entries[0].isIntersecting) {
+            animateCount();
+            countObserver.disconnect();
+          }
+        }, { threshold: 0.1 });
+        countObserver.observe(happyClientsBadgeEl);
+      } else {
+        animateCount();
+      }
+    }
+
+    // Mobile Navigation Drawer Toggle
+    const mobileToggle = document.getElementById('mobileMenuToggle');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+    const menuIconBars = document.getElementById('menuIconBars');
+    const menuIconClose = document.getElementById('menuIconClose');
+
+    if (mobileToggle && mobileDrawer) {
+      mobileToggle.addEventListener('click', function() {
+        const isOpen = mobileDrawer.classList.contains('open');
+        if (isOpen) {
+          mobileDrawer.classList.remove('open');
+          if (menuIconBars) menuIconBars.style.display = 'block';
+          if (menuIconClose) menuIconClose.style.display = 'none';
+        } else {
+          mobileDrawer.classList.add('open');
+          if (menuIconBars) menuIconBars.style.display = 'none';
+          if (menuIconClose) menuIconClose.style.display = 'block';
+        }
+      });
+
+      // Close drawer when any drawer link is clicked
+      const drawerLinks = mobileDrawer.querySelectorAll('.mobile-drawer-link');
+      drawerLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+          mobileDrawer.classList.remove('open');
+          if (menuIconBars) menuIconBars.style.display = 'block';
+          if (menuIconClose) menuIconClose.style.display = 'none';
+        });
+      });
+    }
 
     // Copy email handler
     const copyBtn = document.getElementById('copyEmailBtn');
