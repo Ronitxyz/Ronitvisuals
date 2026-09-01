@@ -22,10 +22,8 @@
       </a>
 
       <nav class="nav-menu">
-        <a href="#work" class="nav-item active">
-          <span>Work</span>
-          <span class="nav-count">8</span>
-        </a>
+        <a href="#work" class="nav-item active">Work</a>
+        <a href="#reviews" class="nav-item">Reviews</a>
         <a href="#showreel" class="nav-item">Showreel</a>
         <a href="#about" class="nav-item">About</a>
         <a href="#services" class="nav-item">Services</a>
@@ -49,10 +47,108 @@
             <p class="hero-subtitle">We engineer high-fidelity moving images, brand films, and culture-defining commercial narratives for world-class creators and forward-thinking brands.</p>
             <div class="hero-btn-group">
               <a href="#work" class="hero-btn-primary">Explore Work ↓</a>
-              <a href="#contact" class="hero-btn-secondary">Initiate Film</a>
+              <a href="#contact" class="hero-btn-secondary">Contact Now</a>
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Adobe Premiere Pro Timeline Animation Divider -->
+    <div class="premiere-timeline-divider">
+      <div class="timeline-inner">
+        <!-- Ruler with Timecodes & Playhead -->
+        <div class="timeline-ruler">
+          <span class="tc-current">00:00:00:00</span>
+          <span class="tc-hidden-sm">00:00:02:12</span>
+          <span>00:00:04:24</span>
+          <span class="tc-hidden-sm">00:00:07:06</span>
+          <span class="tc-mid">00:00:09:18</span>
+          <span class="tc-hidden-sm">00:00:12:00</span>
+          <span>00:00:14:12</span>
+
+          <!-- Ruler Ticks -->
+          <div class="ruler-ticks">
+            <div class="tick-line"></div><div class="tick-line"></div><div class="tick-line major"></div><div class="tick-line"></div>
+            <div class="tick-line"></div><div class="tick-line major"></div><div class="tick-line"></div><div class="tick-line"></div>
+            <div class="tick-line major"></div><div class="tick-line"></div><div class="tick-line"></div><div class="tick-line major"></div>
+            <div class="tick-line"></div><div class="tick-line"></div><div class="tick-line major"></div><div class="tick-line"></div>
+            <div class="tick-line"></div><div class="tick-line major"></div><div class="tick-line"></div><div class="tick-line"></div>
+            <div class="tick-line major"></div><div class="tick-line"></div><div class="tick-line"></div><div class="tick-line major"></div>
+          </div>
+
+          <!-- Animated Premiere CTI / Playhead -->
+          <div class="timeline-playhead">
+            <div class="playhead-head"></div>
+            <div class="playhead-laser"></div>
+          </div>
+        </div>
+
+        <!-- Video & Audio Tracks -->
+        <div class="timeline-tracks">
+          <!-- V2 Track -->
+          <div class="track-lane">
+            <span class="track-label v2-label">V2</span>
+            <div class="track-content">
+              <div class="clip-block clip-purple">COLOR GRADE • LUMETRI LOOK</div>
+              <div class="clip-block clip-pink">4K OVERLAY</div>
+            </div>
+          </div>
+          <!-- V1 Track -->
+          <div class="track-lane">
+            <span class="track-label v1-label">V1</span>
+            <div class="track-content">
+              <div class="clip-block clip-blue-1">CINEMATIC_REEL_01.MOV</div>
+              <div class="clip-block clip-blue-2">SHOWREEL_4K_HDR.MP4</div>
+              <div class="clip-block clip-blue-3">COMMERCIAL_CUT_FINAL.MOV</div>
+            </div>
+          </div>
+          <!-- A1 Track -->
+          <div class="track-lane">
+            <span class="track-label a1-label">A1</span>
+            <div class="track-content">
+              <div class="clip-block clip-green-1">♫ SOUND_DESIGN_STEREO.WAV</div>
+              <div class="clip-block clip-green-2">♫ SFX_WOOSH_RISER.WAV</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Client Reviews Section -->
+    <section id="reviews" class="reviews-section">
+      <div class="section-container">
+        <div class="reviews-header">
+          <div>
+            <div class="reviews-badge">
+              <span class="pulse-dot"></span>
+              <span class="badge-text">Endorsements & Trust</span>
+            </div>
+            <h2 class="section-title">Client <span class="text-stroke">Reviews</span></h2>
+          </div>
+
+          <!-- Arrow navigation -->
+          <div class="reviews-nav-arrows">
+            <button onclick="prevReviewSlide()" aria-label="Previous Reviews" class="review-nav-btn prev-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+              </svg>
+            </button>
+            <button onclick="nextReviewSlide()" aria-label="Next Reviews" class="review-nav-btn next-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="reviews-grid" id="reviewsGridContainer">
+          <!-- Dynamically populated by JS or initial 3 cards -->
+        </div>
+
+        <div class="reviews-dots" id="reviewsDotsContainer"></div>
       </div>
     </section>
 
@@ -333,16 +429,16 @@
     <div class="client-badge">Toyota</div>
   
 
-    <div class="client-badge">JW Marriott</div>
+    <div class="client-badge">Birla Open Minds</div>
   
 
-    <div class="client-badge">The Park</div>
+    <div class="client-badge">FROHEYO</div>
   
 
     <div class="client-badge">The Detailing Mafia</div>
   
 
-    <div class="client-badge">Amaltas</div>
+    <div class="client-badge">AMALTAS BHOPAL</div>
   
 
     <div class="client-badge">Dilip Buildcon Limited</div>
@@ -434,27 +530,35 @@
                 <div class="form-row-3">
                   <div class="form-group">
                     <label class="form-label">Project Scope</label>
-                    <select id="inqScope" class="form-select">
-                      <option value="Short-Form / Reel">Short-Form / Reel</option>
-                      <option value="Commercial Campaign" selected>Commercial Campaign</option>
-                      <option value="Brand Film / Manifesto">Brand Film</option>
-                      <option value="Music Video">Music Video</option>
-                      <option value="Documentary">Documentary</option>
-                      <option value="Color & Sound Mastering">Color & Sound</option>
-                    </select>
+                    <div class="form-select-wrap">
+                      <select id="inqScope" class="form-select">
+                        <option value="" selected>Select an option</option>
+                        <option value="Short-Form / Reel">Short-Form / Reel</option>
+                        <option value="Commercial Campaign">Commercial Campaign</option>
+                        <option value="Brand Film / Manifesto">Brand Film</option>
+                        <option value="Music Video">Music Video</option>
+                        <option value="Documentary">Documentary</option>
+                        <option value="Color & Sound Mastering">Color & Sound</option>
+                      </select>
+                      <div class="select-chevron">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                      </div>
+                    </div>
                   </div>
 
                   <div class="form-group">
                     <label class="form-label">Budget (INR ₹)</label>
                     <div class="currency-input-wrap">
                       <span class="currency-symbol">₹</span>
-                      <input type="text" id="inqBudget" value="₹1,00,000 - ₹3,00,000" placeholder="e.g. 75,000" class="form-input currency-input">
+                      <input type="text" id="inqBudget" value="" placeholder="Eg. 5000" class="form-input currency-input">
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label class="form-label">Target Timeline</label>
-                    <input type="text" id="inqTimeline" value="Q3 / Q4 2026" placeholder="e.g. Q3 2026" class="form-input">
+                    <input type="text" id="inqTimeline" value="" placeholder="e.g. DD/MM/YYYY" class="form-input">
                   </div>
                 </div>
 
@@ -492,21 +596,168 @@
   </footer>
 
   <script>
-    // Play Card Video with Autoplay
+    // Projects and Showreel Metadata for Video Manager
+    const projectsData = [{"index":0,"embedUrl":"https://drive.google.com/file/d/1ZU1RDzKUJQNlg-aZySBcrZG76QZUP0b3/preview","thumbUrl":"https://drive.google.com/thumbnail?id=1ZU1RDzKUJQNlg-aZySBcrZG76QZUP0b3&sz=s1920","title":"Project 1"},{"index":1,"embedUrl":"https://drive.google.com/file/d/1FKRDcfaitfp2oblNP7mxYGizqJ5lTN9g/preview","thumbUrl":"https://drive.google.com/thumbnail?id=1FKRDcfaitfp2oblNP7mxYGizqJ5lTN9g&sz=s1920","title":"Project 2"},{"index":2,"embedUrl":"https://drive.google.com/file/d/16C-eG8Drp5OTWNNfe5MLx7KTCtt2yqZl/preview","thumbUrl":"https://drive.google.com/thumbnail?id=16C-eG8Drp5OTWNNfe5MLx7KTCtt2yqZl&sz=s1920","title":"Project 3"},{"index":3,"embedUrl":"https://drive.google.com/file/d/11LQtyhrfBPqwzokDYQwJMCbK6AlJijSL/preview","thumbUrl":"https://drive.google.com/thumbnail?id=11LQtyhrfBPqwzokDYQwJMCbK6AlJijSL&sz=s1920","title":"Project 4"},{"index":4,"embedUrl":"https://drive.google.com/file/d/1qj9gD5fPydWiVnNEwTOKB2QH4YNLM8G-/preview","thumbUrl":"https://drive.google.com/thumbnail?id=1qj9gD5fPydWiVnNEwTOKB2QH4YNLM8G-&sz=s1920","title":"Project 5"},{"index":5,"embedUrl":"https://drive.google.com/file/d/1oA-Dm7w847XZ47v6b6_uC2PTylNbRvQu/preview","thumbUrl":"https://drive.google.com/thumbnail?id=1oA-Dm7w847XZ47v6b6_uC2PTylNbRvQu&sz=s1920","title":"Project 6"},{"index":6,"embedUrl":"https://drive.google.com/file/d/1yb7WExKEb4x2PgqlqwdPSOgL6O-kWMFW/preview","thumbUrl":"https://drive.google.com/thumbnail?id=1yb7WExKEb4x2PgqlqwdPSOgL6O-kWMFW&sz=s1920","title":"Project 7"},{"index":7,"embedUrl":"https://drive.google.com/file/d/15VIwPs5ZDLOatMQ4bGCI8lE1hdmbgzjV/preview","thumbUrl":"https://drive.google.com/thumbnail?id=15VIwPs5ZDLOatMQ4bGCI8lE1hdmbgzjV&sz=s1920","title":"Project 8"}];
+
+    const showreelMeta = {
+      embedUrl: "https://drive.google.com/file/d/1D0BwnZX37K7L26JL2uB2XR4ma8ZoYYDr/preview",
+      thumbUrl: "https://drive.google.com/thumbnail?id=1D0BwnZX37K7L26JL2uB2XR4ma8ZoYYDr&sz=s1920",
+      title: "RONIT VISUALS Showreel"
+    };
+
+    // Stop all currently playing videos and restore thumbnails
+    function stopAllVideos() {
+      // Restore card thumbnails if iframe was loaded
+      projectsData.forEach(function(p) {
+        var el = document.getElementById('card-media-' + p.index);
+        if (el && el.querySelector('iframe')) {
+          el.innerHTML = '<div class="thumbnail-wrapper" onclick="playCardVideo(' + p.index + ', \'' + p.embedUrl + '\')">' +
+            '<img src="' + p.thumbUrl + '" alt="' + p.title + '" class="card-thumb" loading="lazy" />' +
+            '<div class="play-overlay">' +
+              '<svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1">' +
+                '<circle cx="12" cy="12" r="10" class="play-circle" />' +
+                '<path d="M10 8l6 4-6 4V8z" fill="white" />' +
+              '</svg>' +
+            '</div>' +
+          '</div>';
+        }
+      });
+
+      // Restore showreel thumbnail if iframe was loaded
+      var showreelEl = document.getElementById('showreelFrame');
+      if (showreelEl && showreelEl.querySelector('iframe')) {
+        showreelEl.innerHTML = '<div class="thumbnail-wrapper" onclick="playShowreel(\'' + showreelMeta.embedUrl + '\')">' +
+          '<img src="' + showreelMeta.thumbUrl + '" alt="' + showreelMeta.title + '" class="showreel-thumb" loading="lazy" />' +
+          '<div class="showreel-play-btn">' +
+            '<svg width="28" height="28" viewBox="0 0 24 24" fill="black">' +
+              '<path d="M8 5v14l11-7z"/>' +
+            '</svg>' +
+          '</div>' +
+        '</div>';
+      }
+    }
+
+    // Play Card Video with Autoplay (Stops all other videos first)
     function playCardVideo(index, embedUrl) {
+      stopAllVideos();
       const container = document.getElementById('card-media-' + index);
       if (container) {
         container.innerHTML = '<iframe src="' + embedUrl + '?autoplay=1" allow="autoplay; fullscreen" class="video-iframe"></iframe>';
       }
     }
 
-    // Play Showreel Video with Autoplay
+    // Play Showreel Video with Autoplay (Stops all other videos first)
     function playShowreel(embedUrl) {
+      stopAllVideos();
       const container = document.getElementById('showreelFrame');
       if (container) {
         container.innerHTML = '<iframe src="' + embedUrl + '?autoplay=1" allow="autoplay; fullscreen" class="showreel-iframe"></iframe>';
       }
     }
+
+    // Reviews Data and Carousel
+    const reviewsData = [
+      {
+        rating: 5,
+        starColor: 'gold',
+        quote: "The team is simply the best visual storytelling partner we have collaborated with. The cinematography, color science, and pacing elevated our brand campaign well beyond expectations.",
+        author: "Aman Verma",
+        role: "Marketing Director",
+        company: "Taj Lakefront",
+        isFeatured: false
+      },
+      {
+        rating: 5,
+        starColor: 'indigo',
+        quote: "High-energy, vibrant, and extremely modern. The team delivered social-first commercial cuts that directly drove our product launch engagement numbers.",
+        author: "Zaid Salim Khan",
+        role: "Co-Founder & Brand Lead",
+        company: "FROHEYO",
+        isFeatured: true
+      },
+      {
+        rating: 5,
+        starColor: 'gold',
+        quote: "Their attention to macro details, automotive lighting, and sound dynamics is world-class. The resulting showcase video sets an industry benchmark.",
+        author: "Rakshit Ratra",
+        role: "Operations Director",
+        company: "The Detailing Mafia",
+        isFeatured: false
+      },
+      {
+        rating: 5,
+        starColor: 'gold',
+        quote: "From initial pre-production concepts to final color grading, the team demonstrated flawless professionalism and an uncompromising standard of craft.",
+        author: "Sunita Sharma",
+        role: "Senior Vice President",
+        company: "AMALTAS BHOPAL",
+        isFeatured: false
+      },
+      {
+        rating: 5,
+        starColor: 'indigo',
+        quote: "Capturing large-scale infrastructure requires technical mastery and visionary drone direction. The team delivered breathtaking cinematic scale.",
+        author: "Rajesh Aggarwal",
+        role: "VP Corporate Communications",
+        company: "Dilip Buildcon Limited",
+        isFeatured: true
+      }
+    ];
+
+    let currentReviewIndex = 0;
+
+    function renderReviews() {
+      const container = document.getElementById('reviewsGridContainer');
+      const dotsContainer = document.getElementById('reviewsDotsContainer');
+      if (!container) return;
+
+      const total = reviewsData.length;
+      const visible = [
+        reviewsData[currentReviewIndex],
+        reviewsData[(currentReviewIndex + 1) % total],
+        reviewsData[(currentReviewIndex + 2) % total]
+      ];
+
+      container.innerHTML = visible.map(function(r) {
+        const starHtml = Array(r.rating).fill(0).map(function() {
+          return '<span class="' + (r.starColor === 'indigo' ? 'star-indigo' : 'star-gold') + '">★</span>';
+        }).join('');
+
+        return '<div class="review-card ' + (r.isFeatured ? 'featured' : '') + '">' +
+          '<div>' +
+            '<div class="stars-row">' + starHtml + '</div>' +
+            '<p class="review-quote">"' + r.quote + '"</p>' +
+          '</div>' +
+          '<div class="review-author-box">' +
+            '<h4 class="author-name ' + (r.isFeatured ? 'author-name-featured' : '') + '">' + r.author + '</h4>' +
+            '<p class="author-role">' + r.role + ' • ' + r.company + '</p>' +
+          '</div>' +
+        '</div>';
+      }).join('');
+
+      if (dotsContainer) {
+        dotsContainer.innerHTML = reviewsData.map(function(_, i) {
+          return '<button onclick="goToReviewSlide(' + i + ')" class="review-dot ' + (i === currentReviewIndex ? 'active' : '') + '" aria-label="Slide ' + (i + 1) + '"></button>';
+        }).join('');
+      }
+    }
+
+    function nextReviewSlide() {
+      currentReviewIndex = (currentReviewIndex + 1) % reviewsData.length;
+      renderReviews();
+    }
+
+    function prevReviewSlide() {
+      currentReviewIndex = (currentReviewIndex === 0 ? reviewsData.length - 1 : currentReviewIndex - 1);
+      renderReviews();
+    }
+
+    function goToReviewSlide(idx) {
+      currentReviewIndex = idx;
+      renderReviews();
+    }
+
+    renderReviews();
 
     // Copy email handler
     const copyBtn = document.getElementById('copyEmailBtn');
