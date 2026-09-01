@@ -763,7 +763,7 @@
       stopAllVideos();
       const container = document.getElementById('card-media-' + index);
       if (container) {
-        container.innerHTML = '<iframe src="' + embedUrl + '?autoplay=1" allow="autoplay; fullscreen" class="video-iframe" loading="lazy"></iframe>';
+        container.innerHTML = '<iframe src="' + embedUrl + '?autoplay=1&cc_load_policy=0" allow="autoplay; fullscreen" class="video-iframe" loading="lazy"></iframe>';
       }
     }
 
@@ -772,7 +772,7 @@
       stopAllVideos();
       const container = document.getElementById('showreelFrame');
       if (container) {
-        container.innerHTML = '<iframe src="' + embedUrl + '?autoplay=1" allow="autoplay; fullscreen" class="showreel-iframe" loading="lazy"></iframe>';
+        container.innerHTML = '<iframe src="' + embedUrl + '?autoplay=1&cc_load_policy=0" allow="autoplay; fullscreen" class="showreel-iframe" loading="lazy"></iframe>';
       }
     }
 
